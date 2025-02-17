@@ -32,11 +32,12 @@ def scrape_books(url):
 
     return book_list
 
-books = scrape_books(URL)
+def main():
+    books = scrape_books(URL)
 
-if books:
-    with open("books.json", "w") as f:
-        json.dump(books, f, indent=2)
+    if books:
+        with open("books.json", "w") as f:
+            json.dump(books, f, indent=2)
 
 # install git
 # create repository in github
